@@ -17,7 +17,6 @@ time_start = time.time()
 sift = cv2.xfeatures2d.SIFT_create()
 kp1, des1 = sift.detectAndCompute(img1, None)
 kp2, des2 = sift.detectAndCompute(img2, None)
-
 des1 = GetRootSIFT(des1)
 des2 = GetRootSIFT(des2)
 
