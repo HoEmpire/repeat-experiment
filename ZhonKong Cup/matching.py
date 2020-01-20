@@ -60,7 +60,7 @@ print('number of good matches after homograph test:', goodMatchCount)
 # plot
 draw_params = dict(matchColor=(0, 255, 0),
                    singlePointColor=(255, 0, 0),
-                   # matchesMask=matchesMask,
+                    # matchesMask=matchesMask,
                    flags=0)
 
 img3 = cv2.drawMatches(img1, kp1, img2, kp2, good, None, **draw_params)
