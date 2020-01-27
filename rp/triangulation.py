@@ -25,6 +25,17 @@ def get_color(depth):
     return color
 
 
+def RedrawMatch(img, match):
+    for m in match:
+        xq = int(kp1[m.queryIdx].pt[0])
+        yq = int(kp1[m.queryIdx].pt[1])
+        xr = int(kp2[m.trainIdx].pt[0])+1024
+        yr = int(kp2[m.trainIdx].pt[1])
+        img = cv2.line(img, (xq, yq), (xr, yr), color=(
+            255, 0, 0), thickness=3)
+    return img
+
+
 img1 = cv2.imread('robocar/reference.jpg', cv2.IMREAD_COLOR)
 img2 = cv2.imread('robocar/reference4.jpg', cv2.IMREAD_COLOR)
 
